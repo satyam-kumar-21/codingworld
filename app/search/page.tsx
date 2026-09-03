@@ -1,0 +1,10 @@
+import Link from "next/link";
+import { Footer, SectionHeading, SiteHeader } from "@/components/coding-world";
+import { courses, notes, projects, resources, roadmaps } from "@/lib/catalog";
+
+export default async function SearchPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
+  const { q = "" } = await searchParams;
+  const query = q.toLowerCase();
+  const results = [...courses.map((x) => ({ ...x, href: `/courses/${x.slug}`, type: "Course" })), ...resources.map((x) => ({ ...x, href: `/resources/${x.slug}`, type: "Resource" })), ...notes.map((x) => ({ ...x, href: `/notes/${x.slug}`, type: "Notes" })), ...projects.map((x) => ({ ...x, href: `/projects/${x.slug}`, type: "Project" })), ...roadmaps.map((x) => ({ ...x, href: `/roadmaps/${x.slug}`, type: "Roadmap" }))].filter((item) => !query || `${item.title} ${item.category} ${item.description}`.toLowerCase().includes(query));
+  return <><SiteHeader /><main className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8"><SectionHeading eyebrow="Global search" title={q ? `Results for “${q}”` : "Find your next learning move"} description="Search courses, notes, resources, roadmaps, projects, and more." /><form className="mb-8 flex max-w-2xl gap-3"><input name="q" defaultValue={q} placeholder="Try React, AI, frontend..." className="min-w-0 flex-1 rounded-full border border-slate-200 bg-white px-5 py-3 outline-none focus:border-brand" /><button className="rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white">Search</button></form><div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">{results.map((item) => <Link href={item.href} key={`${item.type}-${item.slug}`} className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand"><div className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">{item.type} · {item.category}</div><h2 className="mt-3 text-xl font-bold text-slate-900">{item.title}</h2><p className="mt-2 text-sm leading-6 text-slate-600">{item.description}</p></Link>)}</div></main><Footer /></>;
+}

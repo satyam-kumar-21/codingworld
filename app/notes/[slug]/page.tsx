@@ -1,0 +1,9 @@
+import Link from "next/link";
+import { Footer, SiteHeader } from "@/components/coding-world";
+import { findItem, notes } from "@/lib/catalog";
+
+export default async function NotesDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const item = findItem(notes, slug);
+  return <><SiteHeader /><main className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8"><Link href="/notes" className="text-sm font-semibold text-brand">← Back to notes</Link><div className="mt-6 grid gap-8 lg:grid-cols-[1fr_0.7fr]"><section><div className="mb-5 inline-flex rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand">{item.category} notes</div><h1 className="text-5xl font-black tracking-tight text-slate-900">{item.title}</h1><p className="mt-5 text-lg leading-8 text-slate-600">{item.description}</p><div className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"><h2 className="text-2xl font-bold text-slate-900">Inside this pack</h2><div className="mt-5 grid gap-3 sm:grid-cols-2">{item.detail.split(", ").map((topic) => <div key={topic} className="rounded-2xl bg-slate-50 p-4 text-sm text-slate-700">✓ {topic}</div>)}</div></div></section><aside className="h-fit rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"><div className="text-sm text-slate-500">{item.eyebrow}</div><h2 className="mt-2 text-2xl font-bold text-slate-900">Revision that feels lighter.</h2><p className="mt-4 text-sm leading-6 text-slate-600">Preview the structure, save your place, and use these notes alongside your projects.</p><button className="mt-8 w-full rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700">{item.tag === "Free" ? "Open notes" : "Buy notes"}</button></aside></div></main><Footer /></>;
+}

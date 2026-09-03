@@ -1,0 +1,9 @@
+import Link from "next/link";
+import { Footer, SiteHeader } from "@/components/coding-world";
+import { findItem, projects } from "@/lib/catalog";
+
+export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const item = findItem(projects, slug);
+  return <><SiteHeader /><main className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8"><Link href="/projects" className="text-sm font-semibold text-brand">← Back to projects</Link><div className="mt-6 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]"><section><div className="mb-5 inline-flex rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand">{item.category} · {item.eyebrow}</div><h1 className="text-5xl font-black tracking-tight text-slate-900">{item.title}</h1><p className="mt-5 text-lg leading-8 text-slate-600">{item.description}</p><div className="mt-8 flex h-80 items-end rounded-3xl p-8 text-5xl font-black text-white shadow-xl" style={{ background: `linear-gradient(135deg, ${item.accent}, #0f172a)` }}>{item.category}</div></section><aside className="h-fit rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"><h2 className="text-2xl font-bold text-slate-900">Build brief</h2><p className="mt-4 text-sm leading-7 text-slate-600">{item.detail}</p><div className="mt-6 space-y-3 text-sm text-slate-700"><div className="flex justify-between border-b border-slate-200 pb-3"><span>Difficulty</span><b>{item.eyebrow.split(" · ")[0]}</b></div><div className="flex justify-between"><span>Technology</span><b>{item.category}</b></div></div><div className="mt-8 flex gap-3"><button className="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">Start tutorial</button><button className="rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700">GitHub</button></div></aside></div></main><Footer /></>;
+}
