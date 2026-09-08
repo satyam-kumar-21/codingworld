@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f4f8ff;
-  --foreground: #0f172a;
-  --brand: #2564e5;
-  --brand-2: #4f46e5;
-  --brand-soft: #eef5ff;
-  --brand-deep: #1749c8;
-  --muted: #64748b;
-  --card: rgba(255, 255, 255, 0.7);
-  --line: rgba(148, 163, 184, 0.22);
+  --background: #0a0f1d;
+  --foreground: #f8fafc;
+  --brand: #f59e0b;
+  --brand-2: #f97316;
+  --brand-soft: #fff7ed;
+  --muted: #cbd5e1;
+  --card: rgba(15, 23, 42, 0.8);
+  --line: rgba(148, 163, 184, 0.2);
+  --dark-panel: #111827;
+  --dark-soft: #0f172a;
+  --purple: #7c3aed;
 }
 
 @theme inline {
@@ -27,63 +29,15 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top left, rgba(37, 100, 229, 0.12), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(79, 70, 229, 0.12), transparent 25%),
-    linear-gradient(180deg, #f5f9ff 0%, #eef4ff 42%, #f8fafc 100%);
+    radial-gradient(circle at top left, rgba(245, 158, 11, 0.14), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.18), transparent 24%),
+    linear-gradient(180deg, #070d18 0%, #0f172a 35%, #0a0f1d 100%);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
 * {
   box-sizing: border-box;
-}
-
-@media (min-width: 1024px) {
-  .min-h-screen > main {
-    grid-template-columns: minmax(0, 3fr) minmax(280px, 1fr) !important;
-    max-width: 1800px;
-  }
-
-  .min-h-screen > main > section > div {
-    max-width: none !important;
-  }
-}
-
-.learning-fullscreen-button {
-  position: absolute;
-  right: 0.75rem;
-  bottom: 0.75rem;
-  z-index: 2;
-  display: flex;
-  width: 2.5rem;
-  height: 2.5rem;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgb(255 255 255 / 0.2);
-  border-radius: 0.375rem;
-  background: rgb(0 0 0 / 0.65);
-  color: white;
-  font-size: 1.25rem;
-  line-height: 1;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.learning-fullscreen-button:hover,
-.learning-fullscreen-button:focus-visible {
-  background: rgb(0 0 0 / 0.9);
-  transform: scale(1.05);
-}
-
-@media (min-width: 768px) {
-  .learning-fullscreen-button {
-    opacity: 0;
-  }
-
-  .min-h-screen > main > section > div > div:hover .learning-fullscreen-button,
-  .min-h-screen > main > section > div > div:focus-within .learning-fullscreen-button {
-    opacity: 1;
-  }
 }
 
 a {
@@ -96,7 +50,7 @@ img {
 }
 
 ::selection {
-  background: rgba(37, 100, 229, 0.2);
+  background: rgba(245, 158, 11, 0.25);
 }
 
 @keyframes floatUp {
@@ -113,10 +67,10 @@ img {
 
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 0 rgba(37, 100, 229, 0.15);
+    box-shadow: 0 0 0 rgba(245, 158, 11, 0.15);
   }
   50% {
-    box-shadow: 0 0 32px rgba(37, 100, 229, 0.18);
+    box-shadow: 0 0 28px rgba(249, 115, 22, 0.18);
   }
 }
 
@@ -127,12 +81,6 @@ img {
   100% {
     background-position: 200% 0;
   }
-}
-
-.glass-panel {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
 }
 
 .float-card {
@@ -146,8 +94,8 @@ img {
 .premium-btn {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
-  box-shadow: 0 18px 38px rgba(37, 100, 229, 0.25);
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+  box-shadow: 0 18px 38px rgba(249, 115, 22, 0.28);
 }
 
 .premium-btn::before {
@@ -162,4 +110,42 @@ img {
 .soft-grid {
   background-image: linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
+}
+
+.hero-panel {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(17, 24, 39, 0.96));
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 28px 80px rgba(15, 23, 42, 0.42);
+}
+
+.company-strip {
+  background: rgba(15, 23, 42, 0.74);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.feature-card {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.78), rgba(17, 24, 39, 0.94));
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.course-card {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.96));
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.solid-light {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.orange-badge {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  color: #fbbf24;
+}
+
+.white-panel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.12);
 }

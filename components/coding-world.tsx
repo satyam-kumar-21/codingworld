@@ -2,41 +2,41 @@ import Link from "next/link";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/60 bg-white/70 backdrop-blur-2xl">
+    <header className="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur-2xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-brand to-indigo-500 text-lg font-black text-white shadow-lg shadow-brand/25">
+          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 via-orange-500 to-orange-600 text-lg font-black text-slate-950 shadow-[0_18px_35px_rgba(249,115,22,0.35)]">
             C
           </div>
           <div>
-            <div className="text-lg font-black tracking-[-0.04em] text-slate-900">Coding World</div>
-            <div className="text-[10px] uppercase tracking-[0.22em] text-slate-500">learn • build • grow</div>
+            <div className="text-lg font-black tracking-[-0.05em] text-white">Coding World</div>
+            <div className="text-[10px] uppercase tracking-[0.22em] text-slate-400">learn • build • grow</div>
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-7 text-sm font-medium text-slate-600 lg:flex">
-          <Link href="/courses" className="transition hover:text-brand">Courses</Link>
-          <Link href="/resources" className="transition hover:text-brand">Resources</Link>
-          <Link href="/roadmaps" className="transition hover:text-brand">Roadmaps</Link>
-          <Link href="/practice" className="transition hover:text-brand">Practice</Link>
-          <Link href="/interview" className="transition hover:text-brand">Interview Prep</Link>
-          <Link href="/blog" className="transition hover:text-brand">Blog</Link>
+        <nav className="hidden items-center gap-7 text-sm font-medium text-slate-300 lg:flex">
+          <Link href="/courses" className="transition hover:text-amber-300">Courses</Link>
+          <Link href="/resources" className="transition hover:text-amber-300">Resources</Link>
+          <Link href="/roadmaps" className="transition hover:text-amber-300">Roadmaps</Link>
+          <Link href="/practice" className="transition hover:text-amber-300">Practice</Link>
+          <Link href="/interview" className="transition hover:text-amber-300">Interview Prep</Link>
+          <Link href="/blog" className="transition hover:text-amber-300">Blog</Link>
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
           <form action="/search" className="relative">
-            <input name="q" aria-label="Search Coding World" placeholder="Search anything..." className="w-44 rounded-full border border-slate-200 bg-white/80 py-2 pl-4 pr-9 text-sm text-slate-700 shadow-sm outline-none transition placeholder:text-slate-400 focus:w-56 focus:border-brand" />
+            <input name="q" aria-label="Search Coding World" placeholder="Search anything..." className="w-44 rounded-full border border-slate-700 bg-slate-900/80 py-2 pl-4 pr-9 text-sm text-slate-100 shadow-sm outline-none transition placeholder:text-slate-400 focus:w-56 focus:border-amber-400/70" />
             <span className="pointer-events-none absolute right-3 top-2 text-slate-400">⌕</span>
           </form>
-          <Link href="/login" className="rounded-full border border-slate-200 bg-white/70 px-3 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-brand hover:text-brand">
+          <Link href="/login" className="rounded-full border border-slate-700 bg-slate-900/80 px-3 py-2 text-sm font-medium text-slate-200 transition hover:-translate-y-0.5 hover:border-amber-400 hover:text-amber-300">
             Login
           </Link>
-          <Link href="/pricing" className="premium-btn inline-flex items-center justify-center rounded-full px-4 py-2.5 text-sm font-semibold text-white">
+          <Link href="/pricing" className="premium-btn inline-flex items-center justify-center rounded-full px-4 py-2.5 text-sm font-semibold text-slate-950">
             Get Started
           </Link>
         </div>
 
-        <button className="rounded-xl border border-slate-200 bg-white/80 p-2 text-slate-700 lg:hidden" aria-label="Open menu">
+        <button className="rounded-xl border border-slate-700 bg-slate-900/80 p-2 text-slate-200 lg:hidden" aria-label="Open menu">
           ☰
         </button>
       </div>
@@ -46,16 +46,16 @@ export function SiteHeader() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-950 text-slate-300">
+    <footer className="border-t border-slate-800 bg-slate-950 text-slate-300">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-5 lg:px-8">
         <div className="space-y-3 lg:col-span-1">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand text-lg font-black text-white">C</div>
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 text-lg font-black text-slate-950">C</div>
             <div>
               <div className="text-lg font-bold text-white">Coding World</div>
             </div>
           </div>
-          <p className="text-sm text-slate-400">Learn coding, build projects and grow your career.</p>
+          <p className="text-sm text-slate-400">Learn coding, build projects and grow your career with premium guidance.</p>
         </div>
 
         <div>
@@ -113,9 +113,9 @@ export function Footer() {
 export function SectionHeading({ eyebrow, title, description }: { eyebrow?: string; title: string; description?: string; }) {
   return (
     <div className="mb-10 max-w-2xl">
-      {eyebrow ? <p className="mb-3 inline-flex rounded-full border border-brand/20 bg-brand/5 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-brand">{eyebrow}</p> : null}
-      <h2 className="text-3xl font-black tracking-[-0.06em] text-slate-900 md:text-4xl">{title}</h2>
-      {description ? <p className="mt-4 text-base leading-7 text-slate-600">{description}</p> : null}
+      {eyebrow ? <p className="orange-badge mb-3 inline-flex rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em]">{eyebrow}</p> : null}
+      <h2 className="text-3xl font-black tracking-[-0.06em] text-white md:text-4xl">{title}</h2>
+      {description ? <p className="mt-4 text-base leading-7 text-slate-300">{description}</p> : null}
     </div>
   );
 }
@@ -146,38 +146,38 @@ export function CourseCard({
   tag: "Free" | "Premium";
 }) {
   return (
-    <article className="group overflow-hidden rounded-[28px] border border-slate-200/80 bg-white/80 p-0 shadow-[0_18px_50px_rgba(15,23,42,0.06)] backdrop-blur-sm transition duration-300 hover:-translate-y-2 hover:shadow-[0_24px_60px_rgba(37,100,229,0.12)]">
-      <div className="h-44 bg-gradient-to-br from-brand/10 via-white to-violet-50 p-5">
+    <article className="course-card group overflow-hidden rounded-[28px] p-0 shadow-[0_18px_50px_rgba(15,23,42,0.26)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_24px_60px_rgba(249,115,22,0.16)]">
+      <div className="h-44 bg-gradient-to-br from-orange-500/10 via-white/5 to-violet-500/10 p-5">
         <div className="flex items-start justify-between">
-          <span className="rounded-full border border-blue-200 bg-white/80 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-brand">
+          <span className="rounded-full border border-amber-400/20 bg-slate-900/80 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-orange-300">
             {category}
           </span>
-          <span className={`rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] ${tag === "Free" ? "bg-emerald-50 text-emerald-700" : "bg-amber-50 text-amber-700"}`}>
+          <span className={`rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] ${tag === "Free" ? "bg-emerald-500/10 text-emerald-300" : "bg-amber-400/10 text-amber-300"}`}>
             {tag}
           </span>
         </div>
-        <div className="mt-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-2xl shadow-lg shadow-slate-200">💻</div>
+        <div className="mt-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-900 text-2xl shadow-lg shadow-slate-950/80">💻</div>
       </div>
       <div className="space-y-4 p-5">
-        <div className="flex items-center justify-between text-xs text-slate-500">
+        <div className="flex items-center justify-between text-xs text-slate-400">
           <span>{level}</span>
           <span>{duration}</span>
         </div>
-        <h3 className="text-xl font-bold tracking-[-0.04em] text-slate-900">{title}</h3>
-        <p className="text-sm leading-6 text-slate-600">{description}</p>
-        <div className="flex items-center justify-between text-xs text-slate-500">
+        <h3 className="text-xl font-bold tracking-[-0.04em] text-white">{title}</h3>
+        <p className="text-sm leading-6 text-slate-300">{description}</p>
+        <div className="flex items-center justify-between text-xs text-slate-400">
           <span>{lessons} lessons</span>
           <span>⭐ {rating}</span>
         </div>
-        <div className="flex items-center justify-between border-t border-slate-200 pt-4">
+        <div className="flex items-center justify-between border-t border-slate-800 pt-4">
           <div>
-            <div className="text-sm text-slate-500">{students} students</div>
+            <div className="text-sm text-slate-400">{students} students</div>
             <div className="mt-1 flex items-center gap-2">
-              <span className="text-2xl font-black tracking-[-0.05em] text-slate-900">₹{price}</span>
-              {originalPrice ? <span className="text-sm text-slate-400 line-through">₹{originalPrice}</span> : null}
+              <span className="text-2xl font-black tracking-[-0.05em] text-white">₹{price}</span>
+              {originalPrice ? <span className="text-sm text-slate-500 line-through">₹{originalPrice}</span> : null}
             </div>
           </div>
-          <Link href={`/courses/${title.toLowerCase().includes("react") ? "react" : title.toLowerCase().includes("node") ? "node" : title.toLowerCase().includes("next") ? "nextjs" : "javascript"}`} className="premium-btn inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold text-white">
+          <Link href={`/courses/${title.toLowerCase().includes("react") ? "react" : title.toLowerCase().includes("node") ? "node" : title.toLowerCase().includes("next") ? "nextjs" : "javascript"}`} className="premium-btn inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold text-slate-950">
             View Course
           </Link>
         </div>
@@ -188,8 +188,8 @@ export function CourseCard({
 
 export function FeaturePill({ title }: { title: string }) {
   return (
-    <div className="inline-flex items-center gap-2 rounded-full border border-brand/20 bg-white/80 px-3 py-2 text-sm font-medium text-brand shadow-sm backdrop-blur-sm">
-      <span className="inline-block h-2 w-2 rounded-full bg-brand shadow-[0_0_12px_rgba(37,100,229,0.8)]" />
+    <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/25 bg-slate-900/80 px-3 py-2 text-sm font-medium text-amber-300 shadow-[0_12px_24px_rgba(249,115,22,0.1)] backdrop-blur-sm">
+      <span className="inline-block h-2 w-2 rounded-full bg-amber-400 shadow-[0_0_12px_rgba(251,191,36,0.8)]" />
       {title}
     </div>
   );
@@ -197,9 +197,9 @@ export function FeaturePill({ title }: { title: string }) {
 
 export function DashboardStat({ label, value, accent }: { label: string; value: string; accent?: string }) {
   return (
-    <div className="rounded-[22px] border border-slate-200/80 bg-white/80 p-4 shadow-[0_16px_32px_rgba(15,23,42,0.04)] backdrop-blur-sm">
-      <div className={`mb-3 inline-flex rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] ${accent ?? "bg-slate-100 text-slate-700"}`}>{label}</div>
-      <div className="text-2xl font-black tracking-[-0.05em] text-slate-900">{value}</div>
+    <div className="rounded-[22px] border border-slate-800 bg-slate-900/80 p-4 shadow-[0_16px_32px_rgba(15,23,42,0.2)]">
+      <div className={`mb-3 inline-flex rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] ${accent ?? "bg-slate-800 text-slate-300"}`}>{label}</div>
+      <div className="text-2xl font-black tracking-[-0.05em] text-white">{value}</div>
     </div>
   );
 }
