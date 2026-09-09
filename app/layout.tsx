@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     "Coding World is a premium LMS platform for programming, web development, AI, roadmaps, interview prep, notes, and real-world project learning.",
   metadataBase: new URL("https://codingworld.in"),
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   openGraph: {
     title: "Coding World",
