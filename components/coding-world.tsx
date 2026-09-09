@@ -14,6 +14,7 @@ export function SiteHeader() {
   const router = useRouter();
   const mobileLinks = [
     ["Courses", "/courses"],
+    ["Notes", "/notes"],
     ["Resources", "/resources"],
     ["Roadmaps", "/roadmaps"],
     ["Practice", "/practice"],
@@ -45,6 +46,7 @@ export function SiteHeader() {
 
         <nav className="hidden items-center gap-7 text-sm font-medium text-slate-300 lg:flex">
           <Link href="/courses" className="transition hover:text-cyan-300">Courses</Link>
+          <Link href="/notes" className="transition hover:text-cyan-300">Notes</Link>
           <Link href="/resources" className="transition hover:text-cyan-300">Resources</Link>
           <Link href="/roadmaps" className="transition hover:text-cyan-300">Roadmaps</Link>
           <Link href="/practice" className="transition hover:text-cyan-300">Practice</Link>
