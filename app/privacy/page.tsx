@@ -1,4 +1,12 @@
 import { Footer, SiteHeader } from "@/components/coding-world";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Privacy Policy",
+  description: "Read the Coding World privacy policy covering account information, course data, payments, and user privacy practices.",
+  path: "/privacy",
+  keywords: ["privacy policy", "Coding World privacy", "student data policy", "learning platform privacy"],
+});
 
 export default function PrivacyPage() {
   return (

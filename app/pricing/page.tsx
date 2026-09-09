@@ -1,5 +1,13 @@
 import Link from "next/link";
 import { Footer, SectionHeading, SiteHeader } from "@/components/coding-world";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Pricing",
+  description: "Explore flexible pricing plans for coding courses, resources, and premium learning paths designed for students and career-focused developers.",
+  path: "/pricing",
+  keywords: ["coding course pricing", "developer course plans", "premium learning pricing", "Coding World pricing"],
+});
 
 export default function PricingPage() {
   return (

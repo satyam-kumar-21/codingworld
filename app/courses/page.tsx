@@ -1,6 +1,14 @@
 import Link from "next/link";
 import { Footer, SectionHeading, SiteHeader } from "@/components/coding-world";
 import { courses } from "@/lib/catalog";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Coding Courses",
+  description: "Explore beginner to advanced coding courses in JavaScript, React, Node.js, Next.js, Python, and AI with project-based learning paths.",
+  path: "/courses",
+  keywords: ["coding courses", "JavaScript course", "React course", "Node.js course", "Next.js course", "Python course", "AI course"],
+});
 
 export default function CoursesPage() {
   return (

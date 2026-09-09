@@ -1,4 +1,12 @@
 import { Footer, SectionHeading, SiteHeader } from "@/components/coding-world";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "About Coding World",
+  description: "Learn about Coding World, our mission, and how we help students and professionals build real-world coding skills with practical learning paths.",
+  path: "/about",
+  keywords: ["about Coding World", "coding education platform", "learn to code", "developer learning platform"],
+});
 
 export default function AboutPage() {
   return (

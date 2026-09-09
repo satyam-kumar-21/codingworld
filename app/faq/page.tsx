@@ -1,4 +1,12 @@
 import { Footer, SiteHeader } from "@/components/coding-world";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Frequently Asked Questions",
+  description: "Find answers to common questions about Coding World courses, learning paths, resources, pricing, and beginner support.",
+  path: "/faq",
+  keywords: ["coding FAQ", "learn to code questions", "developer course FAQs", "Coding World support"],
+});
 
 const faqs = [
   { question: "Do I need prior coding experience?", answer: "No. Many of our courses are designed for beginners and progressively build skills from fundamentals to advanced topics." },

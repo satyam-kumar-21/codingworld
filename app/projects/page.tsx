@@ -1,6 +1,14 @@
 import { Footer, SectionHeading, SiteHeader } from "@/components/coding-world";
 import Link from "next/link";
 import { projects } from "@/lib/catalog";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Project Ideas and Portfolio Builds",
+  description: "Explore practical project ideas for frontend, backend, AI, and full-stack learners to build a strong portfolio with Coding World.",
+  path: "/projects",
+  keywords: ["developer projects", "portfolio projects", "full stack projects", "AI projects", "frontend projects"],
+});
 
 export default function ProjectsPage() {
   return (

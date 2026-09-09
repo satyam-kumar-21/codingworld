@@ -1,4 +1,12 @@
 import { Footer, SiteHeader } from "@/components/coding-world";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Terms and Conditions",
+  description: "Review the terms and conditions for using Coding World, including course access, platform usage, and service policies.",
+  path: "/terms",
+  keywords: ["Coding World terms", "terms and conditions", "platform usage policy"],
+});
 
 export default function TermsPage() {
   return (

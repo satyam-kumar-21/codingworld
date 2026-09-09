@@ -1,6 +1,14 @@
 import Link from "next/link";
 import { Footer, SectionHeading, SiteHeader } from "@/components/coding-world";
 import { resources } from "@/lib/catalog";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Learning Resources",
+  description: "Download coding cheat sheets, developer guides, templates, and practical learning resources to speed up your learning journey.",
+  path: "/resources",
+  keywords: ["developer resources", "coding cheat sheets", "programming guides", "AI templates", "learning resources"],
+});
 
 export default function ResourcesPage() {
   return (

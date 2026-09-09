@@ -1,6 +1,14 @@
 import Link from "next/link";
 import { Footer, SectionHeading, SiteHeader } from "@/components/coding-world";
 import { roadmaps } from "@/lib/catalog";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Developer Roadmaps",
+  description: "Follow clear web development, backend, and AI roadmaps to learn structured skills and grow from beginner to job-ready developer.",
+  path: "/roadmaps",
+  keywords: ["developer roadmap", "frontend roadmap", "backend roadmap", "AI roadmap", "programming roadmap"],
+});
 
 export default function RoadmapsPage() {
   return (

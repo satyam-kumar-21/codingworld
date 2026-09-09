@@ -1,4 +1,12 @@
 import { Footer, SectionHeading, SiteHeader } from "@/components/coding-world";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Coding Blog",
+  description: "Read practical coding tutorials, frontend guides, JavaScript insights, AI learning advice, and career-focused developer content from Coding World.",
+  path: "/blog",
+  keywords: ["coding blog", "web development blog", "JavaScript tutorials", "AI learning blog", "developer articles"],
+});
 
 const posts = [
   { title: "How to build a strong frontend portfolio in 30 days", category: "Web Development", readTime: "6 min read" },

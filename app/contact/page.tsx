@@ -1,4 +1,12 @@
 import { Footer, SiteHeader } from "@/components/coding-world";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Contact Coding World",
+  description: "Reach out to Coding World for course guidance, admissions help, support, and learning-related questions.",
+  path: "/contact",
+  keywords: ["contact Coding World", "coding support", "course guidance", "learn coding help"],
+});
 
 export default function ContactPage() {
   return (
