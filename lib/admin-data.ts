@@ -41,6 +41,15 @@ export const courseInputSchema = z.object({
   tags: z.array(z.string()).default([]),
 });
 
+function normalizeOptionalNumber(value: number | "" | undefined): number | undefined {
+  if (value === undefined || value === "") {
+    return undefined;
+  }
+
+  const numericValue = Number(value);
+  return Number.isFinite(numericValue) ? numericValue : undefined;
+}
+
 const seedCourses: CourseRecord[] = [
   {
     id: "course-js-101",
@@ -142,7 +151,7 @@ export async function createCourseRecord(input: z.infer<typeof courseInputSchema
     level: input.level,
     language: input.language,
     price: Number(input.price),
-    discountPrice: input.discountPrice ? Number(input.discountPrice) : undefined,
+    discountPrice: normalizeOptionalNumber(input.discountPrice),
     duration: input.duration,
     instructor: input.instructor,
     status: input.status,
@@ -157,9 +166,13 @@ export async function createCourseRecord(input: z.infer<typeof courseInputSchema
 
 export async function updateCourseRecord(id: string, input: Partial<z.infer<typeof courseInputSchema>>) {
   const collection = await getCourseCollection();
-  const value = { ...input, updatedAt: new Date() };
+  const value: Partial<CourseRecord> & { updatedAt: Date } = {
+    ...input,
+    discountPrice: input.discountPrice === undefined ? undefined : normalizeOptionalNumber(input.discountPrice),
+    updatedAt: new Date(),
+  };
   const result = await collection.findOneAndUpdate({ id }, { $set: value }, { returnDocument: "after" });
-  return result.value ?? null;
+  return result ?? null;
 }
 
 export async function deleteCourseRecord(id: string) {
