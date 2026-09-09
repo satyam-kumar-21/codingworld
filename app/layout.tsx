@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   description:
     "Coding World is a premium LMS platform for programming, web development, AI, roadmaps, interview prep, notes, and real-world project learning.",
   metadataBase: new URL("https://codingworld.in"),
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   openGraph: {
     title: "Coding World",
     description:
@@ -36,7 +41,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full bg-slate-50 text-slate-900">{children}</body>
+      <body className="min-h-full bg-[#050b14] text-slate-100">{children}</body>
     </html>
   );
 }

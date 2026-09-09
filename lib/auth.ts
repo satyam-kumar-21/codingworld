@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs";
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
 import { env } from "@/lib/env";
-import { db } from "@/lib/db";
+import { getMongoDb } from "@/lib/db";
 
 export const SESSION_COOKIE = "coding-world-session";
 const secret = new TextEncoder().encode(env.sessionSecret);
@@ -48,6 +48,16 @@ export async function clearSession() {
 }
 
 export async function findUserByEmail(email: string) {
-  if (!env.databaseUrl) return null;
-  return db.user.findUnique({ where: { email: email.toLowerCase() } });
+  const database = await getMongoDb();
+  return database.collection<UserRecord>("users").findOne({ email: email.toLowerCase() });
 }
+
+export type UserRecord = {
+  _id?: string;
+  name: string;
+  email: string;
+  passwordHash: string;
+  role: "student" | "admin";
+  createdAt: Date;
+  updatedAt: Date;
+};

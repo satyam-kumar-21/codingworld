@@ -14,15 +14,20 @@ export function AuthForm({ mode }: { mode: "login" | "register" }) {
     setMessage("");
     const form = new FormData(event.currentTarget);
     const payload = Object.fromEntries(form.entries());
-    const response = await fetch(`/api/auth/${mode}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
-    const data = await response.json();
-    setLoading(false);
-    if (!response.ok) {
-      setMessage(data.error ?? "Something went wrong.");
-      return;
+    try {
+      const response = await fetch(`/api/auth/${mode}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+      const data = await response.json();
+      if (!response.ok) {
+        setMessage(data.error ?? "Something went wrong.");
+        return;
+      }
+      localStorage.setItem("coding-world-user", JSON.stringify(data.user));
+      router.push(data.user.role === "admin" ? "/admin" : "/profile?tab=learning");
+    } catch {
+      setMessage("Unable to reach the server. Check that Next.js and MongoDB are running.");
+    } finally {
+      setLoading(false);
     }
-    localStorage.setItem("coding-world-user", JSON.stringify(data.user));
-    router.push(data.user.role === "admin" ? "/admin" : "/dashboard");
   }
 
   return (

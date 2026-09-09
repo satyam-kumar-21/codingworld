@@ -3,7 +3,7 @@ import { z } from "zod";
 const optionalUrl = z.string().url().optional();
 
 export const env = {
-  databaseUrl: process.env.DATABASE_URL,
+  databaseUrl: process.env.MONGODB_URL ?? process.env.DATABASE_URL ?? "mongodb://127.0.0.1:27017/coding_world",
   sessionSecret: process.env.SESSION_SECRET ?? "development-only-session-secret-change-me",
   sessionTtlDays: Number(process.env.SESSION_TTL_DAYS ?? 7),
   adminEmail: process.env.ADMIN_EMAIL?.toLowerCase(),

@@ -1,18 +1,17 @@
-import { PrismaPg } from "@prisma/adapter-pg";
-import { PrismaClient } from "@prisma/client";
+import { MongoClient, type Db } from "mongodb";
 import { env } from "@/lib/env";
 
-const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
+const globalForMongo = globalThis as unknown as {
+  mongoClient?: MongoClient;
+  mongoDb?: Db;
+};
 
-function createPrismaClient() {
-  if (!env.databaseUrl) {
-    throw new Error("DATABASE_URL is required for database access.");
+export async function getMongoDb() {
+  if (!globalForMongo.mongoDb) {
+    globalForMongo.mongoClient ??= new MongoClient(env.databaseUrl);
+    await globalForMongo.mongoClient.connect();
+    globalForMongo.mongoDb = globalForMongo.mongoClient.db();
+    await globalForMongo.mongoDb.collection("users").createIndex({ email: 1 }, { unique: true });
   }
-
-  const adapter = new PrismaPg({ connectionString: env.databaseUrl });
-  return new PrismaClient({ adapter });
+  return globalForMongo.mongoDb;
 }
-
-export const db = globalForPrisma.prisma ?? createPrismaClient();
-
-if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = db;
