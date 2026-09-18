@@ -71,7 +71,6 @@ export default function Impact() {
           onClick={() => scroll('left')}
           aria-label="Scroll impact stories left"
           className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-gray-900/80 text-white transition-colors hover:bg-blue-600 hover:border-blue-500"
-          aria-label="Scroll left"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
@@ -79,7 +78,6 @@ export default function Impact() {
           onClick={() => scroll('right')}
           aria-label="Scroll impact stories right"
           className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-gray-900/80 text-white transition-colors hover:bg-blue-600 hover:border-blue-500"
-          aria-label="Scroll right"
         >
           <ChevronRight className="h-5 w-5" />
         </button>
