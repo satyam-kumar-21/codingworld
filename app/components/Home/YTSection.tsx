@@ -84,8 +84,8 @@ export default function YTSection() {
           {/* Muted Autoplay Video */}
           <div className="relative z-10 my-10 flex w-full flex-1 items-center justify-center">
             {/* Replace the src with your actual video asset URL */}
-            <video 
-              autoPlay 
+            <video
+              preload="none"
               loop 
               muted 
               playsInline 

@@ -14,23 +14,23 @@ const HomeMain = () => {
   return (
    <>
    <Hero />
-   <YTSection />
-   <CompanyScroll />
-   <Impact />
-   <NoteSureCourse />
-   <Testinomials />
+  <div className="defer-render"><YTSection /></div>
+  <div className="defer-render"><CompanyScroll /></div>
+  <div className="defer-render"><Impact /></div>
+  <div className="defer-render"><NoteSureCourse /></div>
+  <div className="defer-render"><Testinomials /></div>
 
 
 
-   <YoutubeCourse />
+  <div className="defer-render"><YoutubeCourse /></div>
 
   
-   <Compare />
-    <FAQ />
+  <div className="defer-render"><Compare /></div>
+   <div className="defer-render"><FAQ /></div>
 
-    <TransformJourney />
+   <div className="defer-render"><TransformJourney /></div>
 
-    <CodingWorldText />
+   <div className="defer-render"><CodingWorldText /></div>
    
    </>
   );

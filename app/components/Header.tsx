@@ -65,10 +65,10 @@ export default function Header() {
         <Image 
           src="/logo.png" 
           alt="Coding World" 
-          width={190} 
-          height={49} 
+          width={220} 
+          height={57} 
           priority 
-          className="h-auto w-40 sm:w-48" 
+          className="h-auto w-44 sm:w-56" 
         />
       </a>
 
