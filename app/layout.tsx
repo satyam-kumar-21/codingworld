@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://codingworld.in"),
+  metadataBase: new URL("https://www.codingworld.in"),
   title: {
     default: "Coding World | Learn Coding, Build Projects, Grow Your Career",
     template: "%s",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://codingworld.in",
+    url: "https://www.codingworld.in",
     siteName: "Coding World",
     title: "Coding World | Learn Coding and Build Real Projects",
     description:
@@ -82,22 +82,22 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               "@graph": [
                 {
                   "@type": "EducationalOrganization",
-                  "@id": "https://codingworld.in/#organization",
+                  "@id": "https://www.codingworld.in/#organization",
                   name: "Coding World",
-                  url: "https://codingworld.in",
-                  logo: "https://codingworld.in/logo.png",
+                  url: "https://www.codingworld.in",
+                  logo: "https://www.codingworld.in/logo.png",
                   description: "Practical coding education for modern developers.",
                 },
                 {
                   "@type": "WebSite",
-                  "@id": "https://codingworld.in/#website",
-                  url: "https://codingworld.in",
+                  "@id": "https://www.codingworld.in/#website",
+                  url: "https://www.codingworld.in",
                   name: "Coding World",
-                  publisher: { "@id": "https://codingworld.in/#organization" },
+                  publisher: { "@id": "https://www.codingworld.in/#organization" },
                 },
                 {
                   "@type": "ItemList",
-                  "@id": "https://codingworld.in/#courses",
+                  "@id": "https://www.codingworld.in/#courses",
                   name: "Coding World Courses",
                   itemListElement: [
                     {
@@ -105,24 +105,24 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                       position: 1,
                       name: "Full-Stack Web Development and AI Engineering",
                       description: "Learn production-ready web applications, backend architecture, DevOps, and AI integration.",
-                      provider: { "@id": "https://codingworld.in/#organization" },
-                      url: "https://codingworld.in/#courses",
+                      provider: { "@id": "https://www.codingworld.in/#organization" },
+                      url: "https://www.codingworld.in/#courses",
                     },
                     {
                       "@type": "Course",
                       position: 2,
                       name: "Next.js and Modern Full-Stack Development",
                       description: "Master the Next.js App Router, Server Components, authentication, and high-performance deployment.",
-                      provider: { "@id": "https://codingworld.in/#organization" },
-                      url: "https://codingworld.in/#courses",
+                      provider: { "@id": "https://www.codingworld.in/#organization" },
+                      url: "https://www.codingworld.in/#courses",
                     },
                     {
                       "@type": "Course",
                       position: 3,
                       name: "Data Structures, Algorithms, and System Design",
                       description: "Build problem-solving skills and prepare for technical coding interviews at leading technology companies.",
-                      provider: { "@id": "https://codingworld.in/#organization" },
-                      url: "https://codingworld.in/#courses",
+                      provider: { "@id": "https://www.codingworld.in/#organization" },
+                      url: "https://www.codingworld.in/#courses",
                     },
                   ],
                 },

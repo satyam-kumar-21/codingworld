@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://codingworld.in/sitemap.xml",
-    host: "https://codingworld.in",
+    sitemap: "https://www.codingworld.in/sitemap.xml",
+    host: "https://www.codingworld.in",
   };
 }
