@@ -75,30 +75,25 @@ export default function YTSection() {
         </div>
 
         {/* Right Column (Video Section) */}
-        <div className="relative flex w-full flex-col justify-between overflow-hidden rounded-3xl bg-gradient-to-b from-[#0a192f] to-[#020617] px-6 py-10 border border-blue-900/30 lg:w-[45%]">
-          
-          <h3 className="z-10 text-4xl font-light text-white sm:text-5xl">
+        <div className="relative flex min-h-[560px] w-full flex-col justify-between overflow-hidden rounded-3xl border border-blue-900/30 bg-[#020617] px-6 py-10 lg:min-h-[620px] lg:w-[45%]">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full object-cover"
+          >
+            <source src="https://www.pexels.com/download/video/30284959/" type="video/mp4" />
+          </video>
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#020617]/75 via-[#020617]/30 to-[#020617]/85" />
+
+          <h3 className="relative z-10 text-4xl font-light text-white sm:text-5xl">
             Start <br /> Learning
           </h3>
-          
-          {/* Muted Autoplay Video */}
-          <div className="relative z-10 my-10 flex w-full flex-1 items-center justify-center">
-            {/* Replace the src with your actual video asset URL */}
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              controls
-              className="w-full max-w-sm rounded-xl object-cover shadow-2xl shadow-black/50 border border-white/10 aspect-video"
-            >
-              <source src="/startLearning.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
 
-          <button className="z-10 self-start rounded-full border border-blue-500/50 px-6 py-2.5 text-sm font-medium text-blue-100 backdrop-blur-sm transition-colors hover:bg-blue-500/20">
+          <button aria-label="Get in touch with Coding World" className="relative z-10 self-start rounded-full border border-blue-500/50 px-6 py-2.5 text-sm font-medium text-blue-100 backdrop-blur-sm transition-colors hover:bg-blue-500/20">
             Get in touch →
           </button>
           
