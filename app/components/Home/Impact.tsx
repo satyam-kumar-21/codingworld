@@ -7,27 +7,27 @@ const IMPACT_CARDS = [
   {
     id: 1,
     title: 'Live Interactive Workshops',
-    img: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800',
+    img: '/impact1.jpg',
   },
   {
     id: 2,
     title: 'Collaborative Coding Sessions',
-    img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800',
+    img: '/impact2.jpg',
   },
   {
     id: 3,
     title: 'Expert Mentorship & Seminars',
-    img: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800',
+    img: '/impact3.jpg',
   },
   {
     id: 4,
     title: 'Hackathons & Competitions',
-    img: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800',
+    img: '/impact4.jpg',
   },
   {
     id: 5,
     title: 'Industry Network Meetups',
-    img: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800',
+    img: 'impact5.jpg',
   },
 ];
 

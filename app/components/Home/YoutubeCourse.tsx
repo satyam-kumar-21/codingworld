@@ -22,8 +22,8 @@ const YOUTUBE_COURSES = [
     category: 'Full Course',
     views: '280K',
     likes: '19.4K',
-    thumbnail: 'https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?auto=format&fit=crop&q=80&w=800',
-    youtubeUrl: 'https://www.youtube.com/playlist?list=PLu0W_9lII9agwh1XjRt242xIpHhPT2rig',
+    thumbnail: '/yt1.jpg',
+    youtubeUrl: 'https://www.youtube.com/',
   },
   {
     id: 2,
@@ -31,8 +31,8 @@ const YOUTUBE_COURSES = [
     category: 'Masterclass',
     views: '410K',
     likes: '34.2K',
-    thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800',
-    youtubeUrl: 'https://www.youtube.com/playlist?list=PLu0W_9lII9agxKOA445v51qKx3tAM3pGf',
+    thumbnail: '/yt2.jpg',
+    youtubeUrl: 'https://www.youtube.com/',
   },
   {
     id: 3,
@@ -40,8 +40,8 @@ const YOUTUBE_COURSES = [
     category: 'Project Tutorial',
     views: '195K',
     likes: '14.8K',
-    thumbnail: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800',
-    youtubeUrl: 'https://www.youtube.com/playlist?list=PLu0W_9lII9agpFUAlPFe_VNSlXW5uE021',
+    thumbnail: '/yt3.jpg',
+    youtubeUrl: 'https://www.youtube.com/',
   },
   {
     id: 4,
@@ -49,8 +49,8 @@ const YOUTUBE_COURSES = [
     category: 'Backend Series',
     views: '320K',
     likes: '22.1K',
-    thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800',
-    youtubeUrl: 'https://www.youtube.com/playlist?list=PLu0W_9lII9agpFUAlPFe_VNSlXW5uE021',
+    thumbnail: '/yt4.jpg',
+    youtubeUrl: 'https://www.youtube.com/',
   },
   {
     id: 5,
@@ -58,8 +58,8 @@ const YOUTUBE_COURSES = [
     category: 'Crash Course',
     views: '150K',
     likes: '11.5K',
-    thumbnail: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800',
-    youtubeUrl: 'https://www.youtube.com/playlist?list=PLu0W_9lII9agwh1XjRt242xIpHhPT2rig',
+    thumbnail: '/yt1.jpg',
+    youtubeUrl: 'https://www.youtube.com/',
   },
   {
     id: 6,
@@ -67,8 +67,8 @@ const YOUTUBE_COURSES = [
     category: 'Guide',
     views: '530K',
     likes: '48.9K',
-    thumbnail: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800',
-    youtubeUrl: 'https://www.youtube.com/playlist?list=PLu0W_9lII9agxKOA445v51qKx3tAM3pGf',
+    thumbnail: '/yt6.jpg',
+    youtubeUrl: 'https://www.youtube.com/',
   },
 ];
 
@@ -107,7 +107,7 @@ export default function YoutubeCourse() {
         </div>
 
         <h2 className="text-3xl font-light tracking-tight text-white sm:text-5xl md:text-6xl">
-          200+ Free Coding Tutorials On <br />
+          20+ Free Coding Tutorials On <br />
           <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-orange-400">
             Coding World
           </span>

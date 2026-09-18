@@ -9,7 +9,7 @@ const TOP_ROW_TESTIMONIALS = [
     name: 'Rohan Sharma',
     role: 'Full Stack Developer',
     rating: 4.9,
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200',
+    avatar: '/student1.jpg',
     review: 'The project-based learning approach here completely transformed my career. The Next.js and backend modules are explained with extreme clarity!',
   },
   {
@@ -17,7 +17,7 @@ const TOP_ROW_TESTIMONIALS = [
     name: 'Priya Verma',
     role: 'MERN Stack Developer',
     rating: 5.0,
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200',
+    avatar: '/student2.jpg',
     review: 'Hands down the best web dev platform! Whenever I got stuck in complex Async React or state management, the mentor support was right there.',
   },
   {
@@ -25,7 +25,7 @@ const TOP_ROW_TESTIMONIALS = [
     name: 'Aman Gupta',
     role: 'Frontend Engineer',
     rating: 4.8,
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200',
+    avatar: '/student3.jpg',
     review: 'Structured curriculum tailored to modern industry demands. Helped me polish my UI engineering skills and land my dream tech job.',
   },
   {
@@ -33,7 +33,7 @@ const TOP_ROW_TESTIMONIALS = [
     name: 'Sneha Reddy',
     role: 'UI/UX & Web Developer',
     rating: 4.9,
-    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=200',
+    avatar: '/student4.jpg',
     review: 'Building real-world scalable web apps with Next.js and Tailwind CSS gave me the portfolio confidence I was missing for months.',
   },
 ];
@@ -44,7 +44,7 @@ const BOTTOM_ROW_TESTIMONIALS = [
     name: 'Vikram Malhotra',
     role: 'Software Engineer',
     rating: 5.0,
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200',
+    avatar: '/student5.jpg',
     review: 'The AI integration and advanced web architecture sections are outstanding. Everything is practical and straight to the point.',
   },
   {
@@ -52,7 +52,7 @@ const BOTTOM_ROW_TESTIMONIALS = [
     name: 'Ananya Das',
     role: 'Backend Developer',
     rating: 4.8,
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200',
+    avatar: '/student6.jpg',
     review: 'Node.js, Express, and database optimization concepts are taught with deep practical examples. Worth every single penny!',
   },
   {
@@ -60,7 +60,7 @@ const BOTTOM_ROW_TESTIMONIALS = [
     name: 'Kabir Mehta',
     role: 'Coding Mentor',
     rating: 4.9,
-    avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&q=80&w=200',
+    avatar: '/student7.jpg',
     review: 'I love recommending these cohorts to aspiring developers. The quality of teaching and real-world code reviews set a new benchmark.',
   },
   {
@@ -68,7 +68,7 @@ const BOTTOM_ROW_TESTIMONIALS = [
     name: 'Neha Kapoor',
     role: 'Junior Web Developer',
     rating: 4.8,
-    avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200',
+    avatar: '/student8.jpg',
     review: 'Zero fluff, pure coding! I went from struggling with basic JavaScript fundamentals to deploying full-stack web applications effortlessly.',
   },
 ];
