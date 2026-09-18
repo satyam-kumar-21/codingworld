@@ -8,12 +8,33 @@ import RequestCallbackModal from './RequestCallbackModal';
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCallbackOpen, setIsCallbackOpen] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+
+  useEffect(() => {
+    let previousScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < 80 || currentScrollY < previousScrollY || isMobileMenuOpen) {
+        setIsHeaderVisible(true);
+      } else {
+        setIsHeaderVisible(false);
+      }
+
+      previousScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isMobileMenuOpen]);
 
   const scrollToSection = (sectionId: string, behavior: ScrollBehavior = 'smooth') => {
     const section = document.getElementById(sectionId);
     if (!section) return;
 
-    const top = section.getBoundingClientRect().top + window.scrollY - 16;
+    const headerHeight = document.querySelector('header')?.getBoundingClientRect().height ?? 0;
+    const top = section.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
     window.scrollTo({ top: Math.max(0, top), behavior });
   };
 
@@ -34,11 +55,11 @@ export default function Header() {
     event.preventDefault();
     setIsMobileMenuOpen(false);
     window.history.replaceState(null, '', `/#${sectionId}`);
-    window.requestAnimationFrame(() => scrollToSection(sectionId));
+    window.setTimeout(() => scrollToSection(sectionId), 0);
   };
 
   return (
-    <header className="relative flex w-full items-center justify-between bg-black px-5 py-4 text-white sm:px-8">
+    <header className={`sticky top-0 z-40 flex w-full items-center justify-between bg-black px-5 py-4 text-white transition-transform duration-300 sm:px-8 ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       {/* Logo */}
       <a href="/#home" aria-label="Coding World home" className="z-20">
         <Image 

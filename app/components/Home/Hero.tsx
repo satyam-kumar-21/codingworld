@@ -25,7 +25,7 @@ export default function Hero() {
 
         {/* Subheading */}
         <p className="mb-10 max-w-3xl text-base text-gray-400 sm:text-lg md:text-xl">
-          Join an elite network of learners leveling up their programming skills for top-tier tech roles at CodingWorld.
+          Join an elite network of learners leveling up their programming skills for top-tier tech roles at Coding World.
         </p>
 
         {/* Social Proof / Avatars */}
@@ -42,10 +42,10 @@ export default function Hero() {
         </div>
 
         {/* CTA Button */}
-        <button className="group flex items-center gap-2 rounded-lg bg-blue-600 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+        <a href="#courses" className="group flex items-center gap-2 rounded-lg bg-blue-600 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]">
           Explore Programs
           <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" strokeWidth={2.5} />
-        </button>
+        </a>
 
       </div>
     </section>

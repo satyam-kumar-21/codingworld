@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Manrope, Space_Grotesk } from "next/font/google";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
 });
 
@@ -18,7 +23,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://codingworld.in"),
   title: {
     default: "Coding World | Learn Coding, Build Projects, Grow Your Career",
-    template: "%s | Coding World",
+    template: "%s",
   },
   description:
     "Coding World helps beginners and developers learn web development, full-stack engineering, AI, and coding interview skills through practical courses and projects.",
@@ -39,6 +44,11 @@ export const metadata: Metadata = {
   creator: "Coding World",
   publisher: "Coding World",
   alternates: { canonical: "/" },
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     type: "website",
     url: "https://codingworld.in",
@@ -59,7 +69,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html lang="en" className={`${manrope.variable} ${spaceGrotesk.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full bg-[#050b14] text-slate-100">
         <Header />
         <main>{children}</main>
@@ -84,6 +94,37 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                   url: "https://codingworld.in",
                   name: "Coding World",
                   publisher: { "@id": "https://codingworld.in/#organization" },
+                },
+                {
+                  "@type": "ItemList",
+                  "@id": "https://codingworld.in/#courses",
+                  name: "Coding World Courses",
+                  itemListElement: [
+                    {
+                      "@type": "Course",
+                      position: 1,
+                      name: "Full-Stack Web Development and AI Engineering",
+                      description: "Learn production-ready web applications, backend architecture, DevOps, and AI integration.",
+                      provider: { "@id": "https://codingworld.in/#organization" },
+                      url: "https://codingworld.in/#courses",
+                    },
+                    {
+                      "@type": "Course",
+                      position: 2,
+                      name: "Next.js and Modern Full-Stack Development",
+                      description: "Master the Next.js App Router, Server Components, authentication, and high-performance deployment.",
+                      provider: { "@id": "https://codingworld.in/#organization" },
+                      url: "https://codingworld.in/#courses",
+                    },
+                    {
+                      "@type": "Course",
+                      position: 3,
+                      name: "Data Structures, Algorithms, and System Design",
+                      description: "Build problem-solving skills and prepare for technical coding interviews at leading technology companies.",
+                      provider: { "@id": "https://codingworld.in/#organization" },
+                      url: "https://codingworld.in/#courses",
+                    },
+                  ],
                 },
               ],
             }),

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import AuthForm from "../components/AuthForm";
 
 export const metadata: Metadata = {
-  title: "Sign In",
+  title: "Coding World | Sign In",
   description: "Sign in to your Coding World learning account.",
   robots: { index: false, follow: true },
 };

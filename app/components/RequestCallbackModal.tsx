@@ -1,12 +1,15 @@
 'use client';
 
 import { FormEvent, useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Send, X } from 'lucide-react';
 
 export default function RequestCallbackModal({ onClose }: { onClose: () => void }) {
   const [submitted, setSubmitted] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
 
@@ -20,7 +23,10 @@ export default function RequestCallbackModal({ onClose }: { onClose: () => void 
     setSubmitted(true);
   }
 
-  return (
+  if (!isMounted) return null;
+
+  return createPortal(
+    (
     <div className="no-scrollbar fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black/80 px-4 py-6 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="callback-title">
       <div className="no-scrollbar relative my-auto max-h-[calc(100vh-3rem)] w-full max-w-xl overflow-y-auto rounded-2xl border border-blue-400/30 bg-[#07111f] p-6 shadow-2xl shadow-blue-950/50 sm:p-10">
         <button onClick={onClose} aria-label="Close callback form" className="absolute right-4 top-4 rounded-full p-2 text-slate-400 transition hover:bg-white/10 hover:text-white">
@@ -74,5 +80,7 @@ export default function RequestCallbackModal({ onClose }: { onClose: () => void 
         )}
       </div>
     </div>
+    ),
+    document.body,
   );
 }

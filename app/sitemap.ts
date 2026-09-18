@@ -5,8 +5,6 @@ const baseUrl = "https://codingworld.in";
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "",
-    "/signin",
-    "/signup",
   ];
 
   return routes.map((route) => ({
