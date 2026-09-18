@@ -85,13 +85,15 @@ export default function YTSection() {
           <div className="relative z-10 my-10 flex w-full flex-1 items-center justify-center">
             {/* Replace the src with your actual video asset URL */}
             <video
-              preload="none"
-              loop 
-              muted 
-              playsInline 
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              controls
               className="w-full max-w-sm rounded-xl object-cover shadow-2xl shadow-black/50 border border-white/10 aspect-video"
             >
-              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+              <source src="/startLearning.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
