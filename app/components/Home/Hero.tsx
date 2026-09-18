@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative flex min-h-[80vh] w-full scroll-mt-8 flex-col items-center justify-center overflow-hidden bg-black px-5 py-20 font-sans">
+    <section id="home" className="relative flex min-h-0 w-full scroll-mt-8 flex-col items-center justify-center overflow-hidden bg-black px-5 py-12 font-sans sm:min-h-[80vh] sm:py-20">
       
       {/* Background Blue Glow & Grid Placeholder */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/20 blur-[120px] sm:h-[500px] sm:w-[600px]"></div>
@@ -31,10 +31,10 @@ export default function Hero() {
         {/* Social Proof / Avatars */}
         <div className="mb-10 flex flex-col items-center gap-4 sm:flex-row">
           <div className="flex -space-x-3">
-            <img className="h-10 w-10 rounded-full border-2 border-black object-cover" src="https://i.pravatar.cc/100?img=11" alt="Student" />
-            <img className="h-10 w-10 rounded-full border-2 border-black object-cover" src="https://i.pravatar.cc/100?img=12" alt="Student" />
-            <img className="h-10 w-10 rounded-full border-2 border-black object-cover" src="https://i.pravatar.cc/100?img=33" alt="Student" />
-            <img className="h-10 w-10 rounded-full border-2 border-black object-cover" src="https://i.pravatar.cc/100?img=14" alt="Student" />
+            <img className="h-10 w-10 rounded-full border-2 border-black object-cover" src="/hero1.jpg" alt="Student" />
+            <img className="h-10 w-10 rounded-full border-2 border-black object-cover" src="/hero2.jpg" alt="Student" />
+            <img className="h-10 w-10 rounded-full border-2 border-black object-cover" src="/hero3.jpg" alt="Student" />
+            <img className="h-10 w-10 rounded-full border-2 border-black object-cover" src="/hero4.jpg" alt="Student" />
           </div>
           <p className="text-sm font-medium text-gray-300">
             <span className="font-bold text-blue-500">500K+</span> Developers mastering modern tech stacks

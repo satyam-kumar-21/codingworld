@@ -75,7 +75,7 @@ export default function YTSection() {
         </div>
 
         {/* Right Column (Video Section) */}
-        <div className="relative flex min-h-[560px] w-full flex-col justify-between overflow-hidden rounded-3xl border border-blue-900/30 bg-[#020617] px-6 py-10 lg:min-h-[620px] lg:w-[45%]">
+        <div className="relative flex min-h-0 w-full flex-col justify-between overflow-hidden rounded-3xl border border-blue-900/30 bg-[#020617] px-6 py-10 md:min-h-[560px] lg:min-h-[620px] lg:w-[45%]">
           <video
             autoPlay
             loop

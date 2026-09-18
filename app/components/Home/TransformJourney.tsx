@@ -69,7 +69,7 @@ const BACKGROUND_CARDS = [
 
 export default function TransformJourney() {
   return (
-    <section id="bootcamp" className="relative flex min-h-[440px] w-full scroll-mt-8 items-center justify-center overflow-hidden bg-black py-16 font-sans text-white sm:min-h-[500px] sm:py-20 md:min-h-[580px] md:py-28">
+    <section id="bootcamp" className="relative flex min-h-0 w-full scroll-mt-8 items-center justify-center overflow-hidden bg-black py-12 font-sans text-white sm:min-h-[500px] sm:py-20 md:min-h-[580px] md:py-28">
       
       {/* Dynamic Ambient Blue Glows */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-[450px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-blue-600/20 via-indigo-600/15 to-cyan-500/20 blur-[180px]" />
