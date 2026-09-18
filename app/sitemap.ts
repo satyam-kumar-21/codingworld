@@ -5,26 +5,8 @@ const baseUrl = "https://codingworld.in";
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "",
-    "/about",
-    "/blog",
-    "/contact",
-    "/courses",
-    "/faq",
-    "/forgot-password",
-    "/interview",
-    "/learning",
-    "/login",
-    "/notes",
-    "/pricing",
-    "/privacy",
-    "/practice",
-    "/projects",
-    "/refund",
-    "/register",
-    "/resources",
-    "/roadmaps",
-    "/search",
-    "/terms",
+    "/signin",
+    "/signup",
   ];
 
   return routes.map((route) => ({
