@@ -85,7 +85,7 @@ export default function YTSection() {
             aria-hidden="true"
             className="absolute inset-0 h-full w-full object-cover"
           >
-            <source src="https://www.pexels.com/download/video/30284959/" type="video/mp4" />
+            <source src="/startLearning.mp4" type="video/mp4" />
           </video>
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#020617]/75 via-[#020617]/30 to-[#020617]/85" />
 
