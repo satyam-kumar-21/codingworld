@@ -168,7 +168,7 @@ export default function NoteSureCourse() {
                               {course.price}
                             </span>
                             {course.originalPrice && (
-                              <span className="text-sm text-gray-500 line-through">
+                              <span className="text-sm text-gray-300 line-through">
                                 {course.originalPrice}
                               </span>
                             )}
@@ -180,7 +180,7 @@ export default function NoteSureCourse() {
                         disabled={course.isComingSoon}
                         className={`group/btn flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold transition-all duration-300 active:scale-95 ${
                           course.isComingSoon
-                            ? 'cursor-not-allowed border border-white/10 bg-white/5 text-gray-500'
+                            ? 'cursor-not-allowed border border-white/10 bg-white/5 text-gray-300'
                             : 'bg-white text-black hover:bg-gray-100 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]'
                         }`}
                       >

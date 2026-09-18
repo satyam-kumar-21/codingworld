@@ -90,7 +90,7 @@ export default function TransformJourney() {
             </div>
             <div className="mt-2 flex items-center justify-between px-1">
               <span className="text-[11px] font-medium text-gray-300">{card.title}</span>
-              <span className="text-[9px] text-gray-500">{card.tag}</span>
+              <span className="text-[9px] text-gray-300">{card.tag}</span>
             </div>
           </div>
         ))}

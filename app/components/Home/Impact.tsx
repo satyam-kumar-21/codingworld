@@ -69,6 +69,7 @@ export default function Impact() {
       <div className="mb-6 flex gap-3 self-end px-6 sm:px-16 lg:px-24">
         <button
           onClick={() => scroll('left')}
+          aria-label="Scroll impact stories left"
           className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-gray-900/80 text-white transition-colors hover:bg-blue-600 hover:border-blue-500"
           aria-label="Scroll left"
         >
@@ -76,6 +77,7 @@ export default function Impact() {
         </button>
         <button
           onClick={() => scroll('right')}
+          aria-label="Scroll impact stories right"
           className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-gray-900/80 text-white transition-colors hover:bg-blue-600 hover:border-blue-500"
           aria-label="Scroll right"
         >

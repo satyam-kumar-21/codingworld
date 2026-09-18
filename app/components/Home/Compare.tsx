@@ -82,7 +82,7 @@ export default function Compare() {
               </div>
               <div>
                 <h3 className="text-xl font-bold tracking-wide text-gray-300">Traditional Platforms</h3>
-                <p className="text-xs text-gray-500">Standard Courses</p>
+                <p className="text-xs text-gray-300">Standard Courses</p>
               </div>
             </div>
 

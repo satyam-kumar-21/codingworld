@@ -17,7 +17,7 @@ export default function Footer() {
             height={48} 
             className="h-auto w-36 object-contain" 
           />
-          <p className="text-center text-xs text-gray-500 md:text-left">
+          <p className="text-center text-xs text-gray-300 md:text-left">
             Empowering the next generation of developers.
           </p>
           
@@ -72,7 +72,7 @@ export default function Footer() {
       <div className="mx-auto my-8 max-w-7xl border-t border-white/10" />
 
       {/* Copyright Bar */}
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 text-xs text-gray-500 sm:flex-row">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 text-xs text-gray-300 sm:flex-row">
         <p>© {new Date().getFullYear()} Coding World. All rights reserved.</p>
         <p>Built for creators & developers.</p>
       </div>

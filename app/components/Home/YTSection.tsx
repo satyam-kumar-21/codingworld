@@ -31,7 +31,7 @@ export default function YTSection() {
                 </div>
                 <p className="text-sm text-gray-400">Coding World Subscribers</p>
               </div>
-              <p className="mt-12 text-sm leading-relaxed text-gray-500">
+              <p className="mt-12 text-sm leading-relaxed text-gray-300">
                 Dive into a thriving and vibrant open-source learning ecosystem.
               </p>
             </div>
@@ -45,7 +45,7 @@ export default function YTSection() {
                 </div>
                 <p className="text-sm text-gray-400">Career-Driven Developers</p>
               </div>
-              <p className="mt-12 text-sm leading-relaxed text-gray-500">
+              <p className="mt-12 text-sm leading-relaxed text-gray-300">
                 Join a massive worldwide community of tech enthusiasts and coders.
               </p>
             </div>
@@ -66,7 +66,7 @@ export default function YTSection() {
             </h2>
             
             <div className="mt-8">
-              <button className="flex h-12 w-20 items-center justify-center rounded-full border border-gray-700 text-white transition-colors hover:bg-white/10">
+              <button aria-label="Explore Coding World programs" className="flex h-12 w-20 items-center justify-center rounded-full border border-gray-700 text-white transition-colors hover:bg-white/10">
                 <ArrowRight strokeWidth={1.5} />
               </button>
             </div>

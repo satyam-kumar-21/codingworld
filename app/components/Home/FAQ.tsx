@@ -79,6 +79,8 @@ export default function FAQ() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
+                aria-expanded={isOpen}
+                aria-controls={`faq-answer-${faq.id}`}
                 className="flex w-full items-center justify-between p-6 text-left transition-colors sm:p-7"
               >
                 <span className="text-base font-medium tracking-tight text-white sm:text-lg">
@@ -96,6 +98,7 @@ export default function FAQ() {
 
               {/* Expandable Content */}
               <div
+                id={`faq-answer-${faq.id}`}
                 className={`grid transition-all duration-300 ease-in-out ${
                   isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                 }`}
