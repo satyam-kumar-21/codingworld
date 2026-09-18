@@ -59,11 +59,11 @@ export default function Footer() {
 
         {/* Simplified Essential Navigation Links */}
         <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-gray-300 md:justify-end">
-          <a href="/#courses" className="transition-colors hover:text-blue-400">Courses</a>
-          <a href="/#home" className="transition-colors hover:text-blue-400">About</a>
-          <a href="/#bootcamp" className="transition-colors hover:text-blue-400">Support</a>
-          <a href="/#home" className="transition-colors hover:text-blue-400">Privacy</a>
-          <a href="mailto:hello@codingworld.in" className="transition-colors hover:text-blue-400">Contact</a>
+          <a href="/courses" className="transition-colors hover:text-blue-400">Courses</a>
+          <a href="/about" className="transition-colors hover:text-blue-400">About</a>
+          <a href="/support" className="transition-colors hover:text-blue-400">Support</a>
+          <a href="/privacy" className="transition-colors hover:text-blue-400">Privacy</a>
+          <a href="/contact" className="transition-colors hover:text-blue-400">Contact</a>
         </div>
 
       </div>
